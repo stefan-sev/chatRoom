@@ -1,0 +1,76 @@
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$formTextArea = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('form-control'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$textarea, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$formInput = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('form-control'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$input, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$formLabel = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('control-label'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$label, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$formGroup = F2(
+	function (formGroupOption, htmlList) {
+		var formGroupOptionClass = function () {
+			var _p0 = formGroupOption;
+			switch (_p0.ctor) {
+				case 'FormGroupDefault':
+					return '';
+				case 'FormGroupSmall':
+					return 'form-group-sm';
+				default:
+					return 'form-group-lg';
+			}
+		}();
+		var formGroupClass = A2(_elm_lang$core$Basics_ops['++'], 'form-group ', formGroupOptionClass);
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class(formGroupClass),
+				_1: {ctor: '[]'}
+			},
+			htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$form = F3(
+	function (formAlignmentOption, extraAttributes, htmlList) {
+		var formAlignmentClass = function () {
+			var _p1 = formAlignmentOption;
+			switch (_p1.ctor) {
+				case 'FormDefault':
+					return '';
+				case 'FormHorizontal':
+					return 'form-horizontal';
+				default:
+					return 'form-inline';
+			}
+		}();
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(formAlignmentClass),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$form, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$FormInline = {ctor: 'FormInline'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$FormHorizontal = {ctor: 'FormHorizontal'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$FormDefault = {ctor: 'FormDefault'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$FormGroupLarge = {ctor: 'FormGroupLarge'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$FormGroupSmall = {ctor: 'FormGroupSmall'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Forms$FormGroupDefault = {ctor: 'FormGroupDefault'};

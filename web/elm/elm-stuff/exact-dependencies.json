@@ -1,0 +1,8 @@
+{
+    "JeremyBellows/elm-bootstrapify": "8.0.2",
+    "elm-lang/virtual-dom": "2.0.3",
+    "elm-lang/websocket": "1.0.2",
+    "elm-lang/html": "2.0.0",
+    "fbonetti/elm-phoenix-socket": "2.0.1",
+    "elm-lang/core": "5.0.0"
+}

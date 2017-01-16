@@ -1,0 +1,134 @@
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$panelBody = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('panel-body'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$div, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$panelHeading = F3(
+	function (panelHeadingTitleType, extraAttributes, extraHtmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('panel-heading'),
+			_1: extraAttributes
+		};
+		var getPanelHeadingTitleHtml = function (panelHeadingTitleType) {
+			var _p0 = panelHeadingTitleType;
+			switch (_p0.ctor) {
+				case 'DefaultTitle':
+					return _elm_lang$html$Html$text(_p0._0);
+				case 'PanelH1':
+					return A2(
+						_elm_lang$html$Html$h1,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(_p0._0),
+							_1: {ctor: '[]'}
+						});
+				case 'PanelH2':
+					return A2(
+						_elm_lang$html$Html$h2,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(_p0._0),
+							_1: {ctor: '[]'}
+						});
+				case 'PanelH3':
+					return A2(
+						_elm_lang$html$Html$h3,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(_p0._0),
+							_1: {ctor: '[]'}
+						});
+				case 'PanelH4':
+					return A2(
+						_elm_lang$html$Html$h4,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(_p0._0),
+							_1: {ctor: '[]'}
+						});
+				default:
+					return A2(
+						_elm_lang$html$Html$h5,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(_p0._0),
+							_1: {ctor: '[]'}
+						});
+			}
+		};
+		var panelHeadingTitleHtml = getPanelHeadingTitleHtml(panelHeadingTitleType);
+		var htmlList = {ctor: '::', _0: panelHeadingTitleHtml, _1: extraHtmlList};
+		return A2(_elm_lang$html$Html$div, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$panel = F3(
+	function (panelType, extraAttributes, htmlList) {
+		var getPanelTypeClass = function (panelType) {
+			var _p1 = panelType;
+			switch (_p1.ctor) {
+				case 'NormalPanel':
+					return 'panel-default';
+				case 'PrimaryPanel':
+					return 'panel-primary';
+				case 'SuccessPanel':
+					return 'panel-success';
+				case 'InfoPanel':
+					return 'panel-info';
+				case 'WarningPanel':
+					return 'panel-warning';
+				default:
+					return 'panel-danger';
+			}
+		};
+		var panelTypeClass = getPanelTypeClass(panelType);
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(
+				A2(_elm_lang$core$Basics_ops['++'], 'panel ', panelTypeClass)),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$div, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$panelGroup = function (htmlList) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('panel-group'),
+			_1: {ctor: '[]'}
+		},
+		htmlList);
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$DangerPanel = {ctor: 'DangerPanel'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$WarningPanel = {ctor: 'WarningPanel'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$InfoPanel = {ctor: 'InfoPanel'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$SuccessPanel = {ctor: 'SuccessPanel'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$PrimaryPanel = {ctor: 'PrimaryPanel'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$NormalPanel = {ctor: 'NormalPanel'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$PanelH5 = function (a) {
+	return {ctor: 'PanelH5', _0: a};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$PanelH4 = function (a) {
+	return {ctor: 'PanelH4', _0: a};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$PanelH3 = function (a) {
+	return {ctor: 'PanelH3', _0: a};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$PanelH2 = function (a) {
+	return {ctor: 'PanelH2', _0: a};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$PanelH1 = function (a) {
+	return {ctor: 'PanelH1', _0: a};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Panels$DefaultTitle = function (a) {
+	return {ctor: 'DefaultTitle', _0: a};
+};

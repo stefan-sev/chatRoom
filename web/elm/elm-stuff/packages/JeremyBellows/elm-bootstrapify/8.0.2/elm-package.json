@@ -1,0 +1,24 @@
+{
+    "version": "8.0.1",
+    "summary": "A collection of functions to use the bootstrap theme when designing html",
+    "repository": "https://github.com/JeremyBellows/elm-bootstrapify.git",
+    "license": "BSD3",
+    "source-directories": [
+        "./src"
+    ],
+    "exposed-modules": [
+        "Bootstrap.Grid",
+        "Bootstrap.Panels",
+        "Bootstrap.Forms",
+        "Bootstrap.ListGroup",
+        "Bootstrap.Navbar",
+        "Bootstrap.Page",
+        "Bootstrap.Wells",
+        "Bootstrap.Buttons"
+    ],
+    "dependencies": {
+        "elm-lang/core": "4.0.3 <= v < 6.0.0",
+        "elm-lang/html": "1.1.0 <= v < 3.0.0"
+    },
+    "elm-version": "0.17.0 <= v < 0.19.0"
+}

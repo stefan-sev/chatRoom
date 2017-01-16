@@ -1,0 +1,24 @@
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Wells$well = F3(
+	function (wellOption, extraAttributes, htmlList) {
+		var wellOptionClass = function () {
+			var _p0 = wellOption;
+			switch (_p0.ctor) {
+				case 'WellNormal':
+					return '';
+				case 'WellSmall':
+					return 'well-sm';
+				default:
+					return 'well-lg';
+			}
+		}();
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(
+				A2(_elm_lang$core$Basics_ops['++'], 'well ', wellOptionClass)),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$div, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Wells$WellLarge = {ctor: 'WellLarge'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Wells$WellSmall = {ctor: 'WellSmall'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Wells$WellNormal = {ctor: 'WellNormal'};

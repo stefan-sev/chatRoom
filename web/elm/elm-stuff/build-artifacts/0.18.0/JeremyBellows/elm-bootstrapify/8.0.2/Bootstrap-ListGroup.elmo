@@ -1,0 +1,19 @@
+var _JeremyBellows$elm_bootstrapify$Bootstrap_ListGroup$listGroupItem = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list-group-item'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$a, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_ListGroup$listGroup = function (htmlList) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list-group'),
+			_1: {ctor: '[]'}
+		},
+		htmlList);
+};

@@ -1,0 +1,84 @@
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$getButtonModifierAttribute = function (btnModifier) {
+	var _p0 = btnModifier;
+	return {
+		ctor: '::',
+		_0: A2(_elm_lang$html$Html_Attributes$attribute, 'data-toggle', 'collapse'),
+		_1: {
+			ctor: '::',
+			_0: A2(_elm_lang$html$Html_Attributes$attribute, 'data-target', _p0._0),
+			_1: {ctor: '[]'}
+		}
+	};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$getButtonModifierClass = function (btnModifier) {
+	var _p1 = btnModifier;
+	switch (_p1.ctor) {
+		case 'BtnLarge':
+			return 'btn-lg';
+		case 'BtnBlock':
+			return 'btn-block';
+		case 'BtnSmall':
+			return 'btn-sm';
+		case 'BtnExtraSmall':
+			return 'btn-xs';
+		default:
+			return 'navbar-btn';
+	}
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$btn = F5(
+	function (btnOption, btnSizeModifiers, btnModifiers, attributes, htmlList) {
+		var buttonOptionClass = function () {
+			var _p2 = btnOption;
+			switch (_p2.ctor) {
+				case 'BtnDefault':
+					return 'btn-default';
+				case 'BtnPrimary':
+					return 'btn-primary';
+				case 'BtnSuccess':
+					return 'btn-success';
+				case 'BtnInfo':
+					return 'btn-info';
+				case 'BtnDanger':
+					return 'btn-danger';
+				default:
+					return 'btn-warning';
+			}
+		}();
+		var buttonModifierAttributes = _elm_lang$core$List$concat(
+			A2(_elm_lang$core$List$map, _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$getButtonModifierAttribute, btnModifiers));
+		var btnModifierAttributes = A2(_elm_lang$core$Basics_ops['++'], buttonModifierAttributes, attributes);
+		var buttonModifierClasses = _elm_lang$core$String$concat(
+			A2(
+				_elm_lang$core$List$map,
+				function ($class) {
+					return A2(_elm_lang$core$Basics_ops['++'], $class, ' ');
+				},
+				A2(_elm_lang$core$List$map, _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$getButtonModifierClass, btnSizeModifiers)));
+		var classes = A2(
+			_elm_lang$core$Basics_ops['++'],
+			'btn ',
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				buttonOptionClass,
+				A2(_elm_lang$core$Basics_ops['++'], ' ', buttonModifierClasses)));
+		var newAttributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(classes),
+			_1: btnModifierAttributes
+		};
+		return A2(_elm_lang$html$Html$button, newAttributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnDanger = {ctor: 'BtnDanger'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnInfo = {ctor: 'BtnInfo'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnWarning = {ctor: 'BtnWarning'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnSuccess = {ctor: 'BtnSuccess'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnPrimary = {ctor: 'BtnPrimary'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnDefault = {ctor: 'BtnDefault'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$NavbarBtn = {ctor: 'NavbarBtn'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnExtraSmall = {ctor: 'BtnExtraSmall'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnSmall = {ctor: 'BtnSmall'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnBlock = {ctor: 'BtnBlock'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnLarge = {ctor: 'BtnLarge'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Buttons$BtnCollapse = function (a) {
+	return {ctor: 'BtnCollapse', _0: a};
+};

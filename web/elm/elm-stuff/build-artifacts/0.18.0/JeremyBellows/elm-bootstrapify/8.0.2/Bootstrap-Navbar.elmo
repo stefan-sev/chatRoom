@@ -1,0 +1,166 @@
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$navbarList = F4(
+	function (navbarOption, navbarListAdjustment, extraAttributes, htmlList) {
+		var getNavbarPillsOptionClass = function (pillsOption) {
+			var _p0 = pillsOption;
+			if (_p0.ctor === 'PillsNotStacked') {
+				return '';
+			} else {
+				return 'nav-stacked';
+			}
+		};
+		var getNavbarOptionClass = function (navbarOption) {
+			var _p1 = navbarOption;
+			switch (_p1.ctor) {
+				case 'NavbarNav':
+					return 'navbar-nav';
+				case 'NavbarTabs':
+					return 'navbar-tabs';
+				default:
+					return A2(
+						_elm_lang$core$Basics_ops['++'],
+						'nav-pills ',
+						getNavbarPillsOptionClass(_p1._0));
+			}
+		};
+		var navbarListAdjustmentClass = function () {
+			var _p2 = navbarListAdjustment;
+			switch (_p2.ctor) {
+				case 'NavbarDefault':
+					return '';
+				case 'NavbarLeft':
+					return 'navbar-left';
+				case 'NavbarRight':
+					return 'navbar-right';
+				default:
+					return 'nav-justified';
+			}
+		}();
+		var navbarClass = A2(
+			_elm_lang$core$Basics_ops['++'],
+			'nav ',
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				getNavbarOptionClass(navbarOption),
+				A2(_elm_lang$core$Basics_ops['++'], ' ', navbarListAdjustmentClass)));
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(navbarClass),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$ul, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$navbarHamburger = function (target) {
+	var dataTargetAttribute = A2(_elm_lang$html$Html_Attributes$attribute, 'data-target', target);
+	var attributes = {
+		ctor: '::',
+		_0: A2(_elm_lang$html$Html_Attributes$attribute, 'data-toggle', 'collapse'),
+		_1: {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('navbar-toggle'),
+			_1: {
+				ctor: '::',
+				_0: dataTargetAttribute,
+				_1: {ctor: '[]'}
+			}
+		}
+	};
+	return A2(
+		_elm_lang$html$Html$button,
+		attributes,
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('icon-bar'),
+					_1: {ctor: '[]'}
+				},
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('icon-bar'),
+						_1: {ctor: '[]'}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('icon-bar'),
+							_1: {ctor: '[]'}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$navbarCollapse = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('collapse navbar-collapse'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$div, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$navbarBrand = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('navbar-brand'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$a, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$navbarHeader = F2(
+	function (extraAttributes, htmlList) {
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('navbar-header'),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$div, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$navbar = F3(
+	function (navbarType, extraAttributes, htmlList) {
+		var navbarTypeClass = function () {
+			var _p3 = navbarType;
+			switch (_p3.ctor) {
+				case 'DefaultNavbar':
+					return 'navbar-default';
+				case 'InverseNavbar':
+					return 'navbar-inverse';
+				default:
+					return 'navbar-form';
+			}
+		}();
+		var navbarClass = A2(_elm_lang$core$Basics_ops['++'], 'navbar ', navbarTypeClass);
+		var attributes = {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(navbarClass),
+			_1: extraAttributes
+		};
+		return A2(_elm_lang$html$Html$nav, attributes, htmlList);
+	});
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$FormNavbar = {ctor: 'FormNavbar'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$InverseNavbar = {ctor: 'InverseNavbar'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$DefaultNavbar = {ctor: 'DefaultNavbar'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarJustified = {ctor: 'NavbarJustified'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarLeft = {ctor: 'NavbarLeft'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarRight = {ctor: 'NavbarRight'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarDefault = {ctor: 'NavbarDefault'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$PillsStacked = {ctor: 'PillsStacked'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$PillsNotStacked = {ctor: 'PillsNotStacked'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarPills = function (a) {
+	return {ctor: 'NavbarPills', _0: a};
+};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarTabs = {ctor: 'NavbarTabs'};
+var _JeremyBellows$elm_bootstrapify$Bootstrap_Navbar$NavbarNav = {ctor: 'NavbarNav'};
